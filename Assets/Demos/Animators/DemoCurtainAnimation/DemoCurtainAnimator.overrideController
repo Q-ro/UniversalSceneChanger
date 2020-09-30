@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DemoCurtainAnimator
+  m_Controller: {fileID: 9100000, guid: 08d581aa50dd1854b9f8d8b01a88ba06, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 738418767e9584846a6ecb90d05a31cb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e7340892da98ae545a0608cfb06c29aa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 11ce1a5b0850ad040b9b03d8a98747cd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 255eb8b9f8b17934388e260cdf361de2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b142410deffa32046b27302e6c10e24a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2c4c2b56c407ba041a7797eb4188cda2, type: 2}
