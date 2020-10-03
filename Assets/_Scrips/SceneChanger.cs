@@ -4,10 +4,7 @@ Date: Wednesday 08/April/2020 @ 17:15:23
 Description:  Loads a different scene 
 */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {

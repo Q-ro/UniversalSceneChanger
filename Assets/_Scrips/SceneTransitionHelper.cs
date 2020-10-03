@@ -17,6 +17,7 @@ public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
 
     [SerializeField] int startingTransitionIndex; // the default or starting transition index for the scene loader to use
     [SerializeField] Animator[] transitionAnimators; // an array of the animator controllers for all the transition animations
+    [SerializeField] bool isIndestructible = true;
     [SerializeField] bool hasCustomSplashScreen = false;
     [SerializeField] GameObject loadingDisplayCanvas = null;
     [SerializeField] Image loadingBar = null;
@@ -39,6 +40,9 @@ public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
 
     void Awake()
     {
+
+        _isIndestructible = isIndestructible;
+
         //base.Awake();
 
         this.currentTransitionIndex = this.startingTransitionIndex;
@@ -178,9 +182,11 @@ public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
         }
 
 
-        if (this.displayLoadingBar)
-            this.loadingDisplayCanvas.SetActive(false);
-        // // this.transitionAnimators[this.currentTransitionIndex].SetTrigger("In");
+        // if (this.displayLoadingBar)
+        //     this.loadingDisplayCanvas.SetActive(false);
+        // // // this.transitionAnimators[this.currentTransitionIndex].SetTrigger("In");
+
+        // this.transitionAnimators[this.currentTransitionIndex].SetTrigger("In");
     }
 
     // A delegate function that will handle what happens when a scene has been loaded
@@ -205,6 +211,9 @@ public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
         // (It is assumed that the animator at position 0 is in fact the custom splash screen)
         if (this.hasCustomSplashScreen && scene.buildIndex == 0)
             this.transitionAnimators[this.currentTransitionIndex].gameObject.SetActive(true);
+
+        if (this.displayLoadingBar)
+            this.loadingDisplayCanvas.SetActive(false);
 
         // upon loading the scene, start the in or "enter scene" animation transition
         this.transitionAnimators[this.currentTransitionIndex].SetTrigger("In");

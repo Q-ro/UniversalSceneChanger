@@ -16,7 +16,7 @@ using UnityEngine;
 /// </summary>
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    [SerializeField] private static bool _isIndestructible = false;
+    [SerializeField] protected static bool _isIndestructible = false;
 
     private static T _instance;
 

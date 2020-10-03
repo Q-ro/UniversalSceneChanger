@@ -8,4 +8,10 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: DemoSpinAnimator
   m_Controller: {fileID: 9100000, guid: 08d581aa50dd1854b9f8d8b01a88ba06, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 738418767e9584846a6ecb90d05a31cb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 43d5b087a495a5247bbb21e9e227020a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 11ce1a5b0850ad040b9b03d8a98747cd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: eba27f43d635c414a99993556c288a83, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b142410deffa32046b27302e6c10e24a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 079df7200b83bfb4b8d1dc490e1b00e4, type: 2}
