@@ -6,31 +6,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class SceneTransitionUIButton : MonoBehaviour
+public class SceneTransitionUIButton : SceneChanger
 {
-
-    [SerializeField] bool isTransitionByIndex = false;
-    [SerializeField] string sceneName;
-    [SerializeField] int sceneIndex;
-    [SerializeField] int transitionIndex;
-
     // Start is called before the first frame update
     void Start()
     {
         Button button = this.GetComponent<Button>();
-        button.onClick.AddListener(TransitionOnClick);
+        button.onClick.AddListener(ChangeScene);
     }
 
-    // Update is called once per frame
-    void TransitionOnClick()
-    {
-        if (isTransitionByIndex)
-        {
-            SceneTransitionHelper.Instance.ChangeScene(sceneIndex, transitionIndex);
-        }
-        else
-        {
-            SceneTransitionHelper.Instance.ChangeScene(sceneName, transitionIndex);
-        }
-    }
 }

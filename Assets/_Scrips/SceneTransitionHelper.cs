@@ -14,8 +14,6 @@ using UnityEngine.UI;
 public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
 {
     #region Inspector Properties
-
-    [SerializeField] int startingTransitionIndex; // the default or starting transition index for the scene loader to use
     [SerializeField] Animator[] transitionAnimators; // an array of the animator controllers for all the transition animations
     [SerializeField] bool isIndestructible = true;
     [SerializeField] bool hasCustomSplashScreen = false;
@@ -35,7 +33,6 @@ public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
     {
         base.OnEnable();
         SceneManager.sceneLoaded += OnSceneLoaded;
-
     }
 
     void Awake()
@@ -45,7 +42,6 @@ public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
 
         //base.Awake();
 
-        this.currentTransitionIndex = this.startingTransitionIndex;
         if (this.loadingDisplayCanvas != null)
             this.loadingDisplayCanvas.SetActive(false);
 

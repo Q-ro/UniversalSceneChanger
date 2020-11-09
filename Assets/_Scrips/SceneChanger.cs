@@ -9,15 +9,22 @@ using UnityEngine;
 public class SceneChanger : MonoBehaviour
 {
 
-    // Loads the scene with the given name
-    public void LoadSceneByName(string scene)
+    [SerializeField] protected bool isTransitionByIndex = false;
+    [SerializeField] protected string sceneName;
+    [SerializeField] protected int sceneIndex;
+    [SerializeField] protected int transitionIndex;
+
+
+    protected void ChangeScene()
     {
-        // SceneManager.LoadScene (scene);
-        SceneTransitionHelper.Instance.ChangeScene(scene,0);
+        if (isTransitionByIndex)
+        {
+            SceneTransitionHelper.Instance.ChangeScene(sceneIndex, transitionIndex);
+        }
+        else
+        {
+            SceneTransitionHelper.Instance.ChangeScene(sceneName, transitionIndex);
+        }
     }
-    public void LoadSceneByIndex(int scene)
-    {
-        // SceneManager.LoadScene (scene);
-        SceneTransitionHelper.Instance.ChangeScene(scene,0);
-    }
+
 }
