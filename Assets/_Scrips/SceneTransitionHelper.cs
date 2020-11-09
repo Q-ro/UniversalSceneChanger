@@ -14,6 +14,7 @@ using UnityEngine.UI;
 public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
 {
     #region Inspector Properties
+
     [SerializeField] Animator[] transitionAnimators; // an array of the animator controllers for all the transition animations
     [SerializeField] bool isIndestructible = true;
     [SerializeField] bool hasCustomSplashScreen = false;
@@ -22,9 +23,11 @@ public class SceneTransitionHelper : Singleton<SceneTransitionHelper>
     [SerializeField] Text progressText = null;
 
     #endregion
+
     private bool displayLoadingBar = false;
 
     #region Private Properties
+
     private int currentTransitionIndex; // what animation has been selected to transition to/from a given scene
 
     #endregion
